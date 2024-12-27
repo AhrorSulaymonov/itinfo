@@ -18,7 +18,7 @@ async function getAuthors() {
     }
   }
 
-  await fetch("http://localhost:3030/api/author/all", {
+  await fetch("http://45.138.158.157:3030/api/author/all", {
     method: "GET",
     headers: {
       Authorization: `Bearer ${accessToken}`,
@@ -67,12 +67,15 @@ function displayAuthor(authors) {
 
 async function refreshTokenFunc() {
   try {
-    const response = await fetch("http://localhost:3030/api/author/refresh", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "http://45.138.158.157:3030/api/author/refresh",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const data = await response.json();
     console.log("data error refreshtoken", data.error);
     console.log("data refreshtoken", data);

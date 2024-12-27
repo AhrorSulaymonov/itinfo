@@ -2,7 +2,7 @@ const div = document.getElementById("cardWrapper");
 
 (async function () {
   try {
-    const response = await fetch("http://localhost:3030/api/author/all");
+    const response = await fetch("http://45.138.158.157:3030/api/author/all");
     if (!response.ok) {
       throw new Error(`HTTP xato: ${response.status}`);
     }

@@ -19,7 +19,7 @@ async function getAdmins() {
     return console.log("Admin creator emas");
   }
 
-  await fetch("http://localhost:3030/api/admin/all", {
+  await fetch("http://45.138.158.157:3030/api/admin/all", {
     method: "GET",
     headers: {
       Authorization: `Bearer ${admin_accessToken}`,
@@ -58,12 +58,15 @@ function isCreator(token) {
 
 async function adminRefreshTokenFunc() {
   try {
-    const response = await fetch("http://localhost:3030/api/admin/refresh", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "http://45.138.158.157:3030/api/admin/refresh",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const data = await response.json();
     if (data.error && data.error == "jwt expired") {
       console.log("Refresh tokkenni ham vaqti chiqib ketdi");
