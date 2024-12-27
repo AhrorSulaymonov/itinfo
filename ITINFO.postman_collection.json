@@ -1,0 +1,1219 @@
+{
+	"info": {
+		"_postman_id": "152a0956-712d-4ba5-b4f0-e7b53b3b1960",
+		"name": "ITINFO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39646295"
+	},
+	"item": [
+		{
+			"name": "dict",
+			"item": [
+				{
+					"name": "addTerm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"term\":\"c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/dict/create"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTerms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/dict/all"
+					},
+					"response": []
+				},
+				{
+					"name": "getTermsByLetter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/dict/letter/?letter=P",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"dict",
+								"letter",
+								""
+							],
+							"query": [
+								{
+									"key": "letter",
+									"value": "P"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTermsByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/dict/term/java"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTermById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3030/api/dict/675ac56dcc1c5cff53791cc7"
+					},
+					"response": []
+				},
+				{
+					"name": "updateTermById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"term\":\"Python\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/dict/675e8b8760ddb5de87c04720"
+					},
+					"response": []
+				},
+				{
+					"name": "getTermById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/dict/675e8b8760ddb5de87c04720"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "getAllCAtegories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjdkZTlhNzFiMjFhZjgwMjk0ZmRhNiIsImVtYWlsIjoiYWhyb3IyMDA0MkBnbWFpbC5jb20iLCJhZG1pbl9pc19hY3RpdmUiOnRydWUsImlhdCI6MTczNDg2Mzg1MSwiZXhwIjoxNzM0OTE3ODUxfQ.20koYCtFrNZeQwAx54IRO2IbhG4unraxA77m2iK7Xn4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/category/all"
+					},
+					"response": []
+				},
+				{
+					"name": "addCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\":\"\",\r\n    \"parent_category_id\":\"675e94185ca5197ce96a693!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/category/create"
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/category/name/?name=sun",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"category",
+								"name",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "sun"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/category/675e8d8e4a8f729fb1d6b23e"
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategoryById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\":\"Web dasturlash\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/category/675e8d8e4a8f729fb1d6b23e"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3030/api/category/675e8d8e4a8f729fb1d6b23e"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "description",
+			"item": [
+				{
+					"name": "getAllDescription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/description/all"
+					},
+					"response": []
+				},
+				{
+					"name": "addDescription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\":\"675e94990934dde730ce7090\",\r\n    \"description\":\"ma'lumotlarni tozalash musur bo'lnagan ma'lumotlarni yig'ish\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/description/create"
+					},
+					"response": []
+				},
+				{
+					"name": "getDescriptionsBycategory_idQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/description/category_id?category_id=675e94990934dde730ce7090",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"description",
+								"category_id"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "675e94990934dde730ce7090"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDescriptionById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/description/675ea2b5bd909026dee4f03f"
+					},
+					"response": []
+				},
+				{
+					"name": "updateDescriptionById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\":\"675e94990934dde730ce7090\",\r\n    \"description\":\"ma'lumotlarni tozalash musur bo'lmagan ma'lumotlarni yig'ish\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/description/675ea2b5bd909026dee4f03f"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteDescriptionById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3030/api/description/675ea2b5bd909026dee4f03f"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "synonym",
+			"item": [
+				{
+					"name": "getAllSynonyms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/synonym/all"
+					},
+					"response": []
+				},
+				{
+					"name": "addSynonym",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"desc_id\":\"!\",\r\n    \"dict_id\":\"!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/synonym/create"
+					},
+					"response": []
+				},
+				{
+					"name": "getSynonymsByDesc_idQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/synonym/Desc_id/?desc_id=675ea5901d09a70176acb2ce",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"synonym",
+								"Desc_id",
+								""
+							],
+							"query": [
+								{
+									"key": "desc_id",
+									"value": "675ea5901d09a70176acb2ce"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSynonymsByDict_idQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/synonym/Dict_id/?dict_id=675e8b8760ddb5de87c04720",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"synonym",
+								"Dict_id",
+								""
+							],
+							"query": [
+								{
+									"key": "dict_id",
+									"value": "675e8b8760ddb5de87c04720"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSynonymById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/synonym/675ea772e9c9eaaeec8ed4cc"
+					},
+					"response": []
+				},
+				{
+					"name": "updateSynonymById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"desc_id\":\"675ea5901d09a70176acb2ce\",\r\n    \"dict_id\":\"675ea74fe9c9eaaeec8ed4c8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/synonym/675ea772e9c9eaaeec8ed4cc"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "author",
+			"item": [
+				{
+					"name": "getAllAuthors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjliYzNlZjYyOWRhOWVmMGMzZGI4YyIsImVtYWlsIjoiYWhyb3JzdWxheW1vbm92NDk0QGdtYWlsLmNvbSIsImF1dGhvcl9pc19hY3RpdmUiOmZhbHNlLCJpYXQiOjE3MzUxMjA0ODgsImV4cCI6MTczNTE3NDQ4OH0.1mbBn35ha9D3L9Kv2itpOJunXcNBQ6OIFg-LYNo1dM4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/author/all"
+					},
+					"response": []
+				},
+				{
+					"name": "addAuthor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author_first_name\":\"Ahror\",\r\n    \"author_last_name\":\"Sulaymonov\",\r\n    \"author_email\":\"AhrorSulaymonov494@gmail.com\",\r\n    \"author_phone\":\"57-108-23-78\",\r\n    \"author_password\":\"123456\",\r\n    \"author_info\":\"yomkmkrvkermkon o'quvchi)\",\r\n    \"author_position\":\"o'quvchi\",\r\n    \"author_photo\":\"ewinveinve.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/author/create"
+					},
+					"response": []
+				},
+				{
+					"name": "getAuthorById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/author/675ec1c975f3f72bd7c35204"
+					},
+					"response": []
+				},
+				{
+					"name": "updateAuthorById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjQ4MGIzNmQwZTQ4YzFkZTIwZTYxNCIsImVtYWlsIjoia21yanZqZWp2MUBnbWFpbC5jb20iLCJhdXRob3JfaXNfYWN0aXZlIjp0cnVlLCJpYXQiOjE3MzQ4NjI0NzYsImV4cCI6MTczNDkxNjQ3Nn0.2Vx7TfTMOOZUOwnl5sQ6g5eY0OynHx3OcUuaxzklKks"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author_first_name\":\"hello1\",\r\n    \"author_last_name\":\"nwuw1\",\r\n    \"author_email\":\"kmrjvjejv1@gmail.com\",\r\n    \"author_phone\":\"52-008-23-74\",\r\n    \"author_password\":\"123456\",\r\n    \"author_info\":\"yomkmkrvkermkon o'quvchi)\",\r\n    \"author_position\":\"o'quvchi\",\r\n    \"author_photo\":\"ewinveinve.png\",\r\n    \"is_expert\":true,\r\n    \"author_is_active\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/author/676480b36d0e48c1de20e614"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAuthorById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3030/api/author/675ec1c975f3f72bd7c35204"
+					},
+					"response": []
+				},
+				{
+					"name": "loginAuthor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author_email\":\"AhrorSulaymonov494@gmail.com\",\r\n    \"author_password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/author/login"
+					},
+					"response": []
+				},
+				{
+					"name": "logOut",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3030/api/author/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "refreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3030/api/author/refresh"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "social",
+			"item": [
+				{
+					"name": "getAllSocials",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/social/all"
+					},
+					"response": []
+				},
+				{
+					"name": "addSocial",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"social_name\":\"KUMUSH HAQIDAGI HIKOYA\",\r\n    \"social_icon_file\":\"kumush.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/social/create"
+					},
+					"response": []
+				},
+				{
+					"name": "updateSocialById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"social_name\":\"OLTIN HAQIDAGI HIKOYA\",\r\n    \"social_icon_file\":\"oltin.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/social/675edea85e143322cc9741f8"
+					},
+					"response": []
+				},
+				{
+					"name": "getSocialById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/social/675edea85e143322cc9741f8"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSocialById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3030/api/social/675edea85e143322cc9741f8"
+					},
+					"response": []
+				},
+				{
+					"name": "getSocialByNameQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/social/name?name=oltin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"social",
+								"name"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "oltin"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authorSocial",
+			"item": [
+				{
+					"name": "getAllAuthorSocials",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/authorSocial/all"
+					},
+					"response": []
+				},
+				{
+					"name": "addAuthorSocial",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author_id\":\"675ec1c975f3f72bd7c35204\",\r\n    \"social_id\":\"675edfa65e143322cc974200\",\r\n    \"social_link\":\"https://www.example.org/path?query=value\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/authorSocial/create"
+					},
+					"response": []
+				},
+				{
+					"name": "updateAuthorSocialById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author_id\":\"675ec1c975f3f72bd7c35204\",\r\n    \"social_id\":\"675edfa65e143322cc974200\",\r\n    \"social_link\":\"https://www.example.org/path?query=value1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/authorSocial/675ee8c0a76c1d943564ec97"
+					},
+					"response": []
+				},
+				{
+					"name": "getAuthorSocialById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/authorSocial/675ee8c0a76c1d943564ec97"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAuthorSocial",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3030/api/authorSocial/675ee8c0a76c1d943564ec97"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "topic",
+			"item": [
+				{
+					"name": "getAllTopics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/topic/all"
+					},
+					"response": []
+				},
+				{
+					"name": "addTopic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author_id\":\"675ec1c975f3f72bd7c35204\",\r\n      \"topic_title\":\"topic title 1\",\r\n      \"topic_text\":\"topic text 1\",\r\n      \"is_checked\":true,\r\n      \"is_approved\":false,\r\n      \"expert_id\":\"675ec1c975f3f72bd7c35204\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/topic/create"
+					},
+					"response": []
+				},
+				{
+					"name": "getTopicsByTitleQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/topic/title/?title=topic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"topic",
+								"title",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "topic"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTopicById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author_id\":\"675ec1c975f3f72bd7c35204\",\r\n      \"topic_title\":\"topic title 1\",\r\n      \"topic_text\":\"topic text 1\",\r\n      \"is_checked\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/topic/675f030c9579b8d75c3ba46c"
+					},
+					"response": []
+				},
+				{
+					"name": "getTopicById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/topic/675f030c9579b8d75c3ba46c"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTopicById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3030/api/topic/675f030c9579b8d75c3ba46c"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "descTopic",
+			"item": [
+				{
+					"name": "getDescTopics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/descTopic/all"
+					},
+					"response": []
+				},
+				{
+					"name": "addDescTopic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"desc_id\":\"675ea5901d09a70176acb2ce\",\r\n     \"topic_id\":\"675efe615ab606a4c3897a81\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/descTopic/create"
+					},
+					"response": []
+				},
+				{
+					"name": "getDescTopicsByDesc_idQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/descTopic/Desc_id?desc_id=675ea5901d09a70176acb2ce",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"descTopic",
+								"Desc_id"
+							],
+							"query": [
+								{
+									"key": "desc_id",
+									"value": "675ea5901d09a70176acb2ce"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDescTopicsByTopic_idQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/descTopic/Dict_id/?topic_id=675efe615ab606a4c3897a81",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"descTopic",
+								"Dict_id",
+								""
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "675efe615ab606a4c3897a81"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateDescTopicById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"desc_id\":\"675ea5901d09a70176acb2ce\",\r\n     \"topic_id\":\"675f04a43a119bfe6f326ef2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/descTopic/675f25400dc12450b578c01d"
+					},
+					"response": []
+				},
+				{
+					"name": "getDescTopicById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/descTopic/675f25400dc12450b578c01d"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteDescTopicById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3030/api/descTopic/675f25400dc12450b578c01d"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tag",
+			"item": [
+				{
+					"name": "getAllTags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/tag/all"
+					},
+					"response": []
+				},
+				{
+					"name": "addTags",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\":\"675e94990934dde730ce7090\",\r\n    \"topic_id\":\"675efe615ab606a4c3897a81\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/tag/create"
+					},
+					"response": []
+				},
+				{
+					"name": "getTagsByCategory_idQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/tag/Category_id?category_id=675e94185ca5197ce96a693f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"tag",
+								"Category_id"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "675e94185ca5197ce96a693f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTagsByTopic_idQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/tag/Topic_id?topic_id=675efe615ab606a4c3897a81",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"tag",
+								"Topic_id"
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "675efe615ab606a4c3897a81"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTagById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\":\"675e94990934dde730ce7090\",\r\n    \"topic_id\":\"675efe615ab606a4c3897a81\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/tag/675f2c3d2126354b5e0076b3"
+					},
+					"response": []
+				},
+				{
+					"name": "getTagById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/tag/675f2c3d2126354b5e0076b3"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTagById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3030/api/tag/675f2c3d2126354b5e0076b3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "getAllAdmins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjdkZTlhNzFiMjFhZjgwMjk0ZmRhNiIsImVtYWlsIjoiYWhyb3IyMDA0MkBnbWFpbC5jb20iLCJhZG1pbl9pc19hY3RpdmUiOnRydWUsImlhdCI6MTczNTE1MTc5MiwiZXhwIjoxNzM1MTUxODA3fQ.197FOzzHu-4JcIEfW3UlSXER7WYKTN3Q3tTRQitp1QQ"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/admin/all"
+					},
+					"response": []
+				},
+				{
+					"name": "addAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"admin_name\":\"AhrorSulaymonov49@gmail.com\",\r\n    \"admin_email\":\"AhrorSulaymonov49@gmail.com\",\r\n    \"admin_phone\":\"12-123-14-87\",\r\n    \"admin_password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/admin/create"
+					},
+					"response": []
+				},
+				{
+					"name": "loginAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"admin_email\":\"ahror20042@gmail.com\",\r\n    \"admin_password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/admin/login"
+					},
+					"response": []
+				},
+				{
+					"name": "logoutAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3030/api/admin/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "refreshToeknAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3030/api/admin/refresh"
+					},
+					"response": []
+				},
+				{
+					"name": "updateAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjdkZTlhNzFiMjFhZjgwMjk0ZmRhNiIsImVtYWlsIjoiYWhyb3IyMDA0MkBnbWFpbC5jb20iLCJhZG1pbl9pc19hY3RpdmUiOnRydWUsImlhdCI6MTczNDg2MjIwNiwiZXhwIjoxNzM0OTE2MjA2fQ.X1GxsHVwnFIoaqr3-2reTKf3lE5vDyQ9aIgziR8K1aU"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"admin_name\":\"Asi2\",\r\n    \"admin_email\":\"ahrore20042@gmail.com\",\r\n    \"admin_phone\":\"12-133-14-12\",\r\n    \"admin_password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/admin/6767de9a71b21af80294fda6"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjU4N2ViY2FiZmQ1NjkwYzg1OWU0ZCIsImVtYWlsIjoiYWhyb3IyMDA0MkBnbWFpbC5jb20iLCJ1c2VyX2lzX2FjdGl2ZSI6ZmFsc2UsImlhdCI6MTczNDcwNzIwMywiZXhwIjoxNzM0NzYxMjAzfQ.QW1hViZOWYPC0MBhwd4egcJ6_3tzLhOuScVh579AfqE"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3030/api/user/all"
+					},
+					"response": []
+				},
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"user_name\":\"Ahror2\",\r\n      \"user_email\":\"ahrorsulaymonov494@gmail.com\",\r\n      \"user_password\":\"123456\",\r\n      \"user_info\":\"user xolos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/user/create"
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\": \"ahror20042@gmail.com\",\r\n    \"user_password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3030/api/user/login"
+					},
+					"response": []
+				},
+				{
+					"name": "LogoutUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3030/api/user/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "refreshTokenUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3030/api/user/refresh"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

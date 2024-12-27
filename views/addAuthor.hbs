@@ -1,0 +1,86 @@
+<h1>Add Author page</h1>
+<form id="loginForm">
+  <div class="mb-3">
+    <label for="first_name" class="form-label">Firstname</label>
+    <input
+      type="text"
+      name="author_first_name"
+      class="form-control"
+      id="first_name"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="last_name" class="form-label">Lastname</label>
+    <input
+      type="text"
+      name="author_last_name"
+      class="form-control"
+      id="last_name"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input
+      type="email"
+      name="author_email"
+      class="form-control"
+      id="email"
+      aria-describedby="emailHelp"
+    />
+    <div id="emailHelp" class="form-text">We'll never share your email with
+      anyone else.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="phone" class="form-label">Author phone</label>
+    <input type="text" name="author_phone" class="form-control" id="phone" />
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Author password</label>
+    <input
+      type="password"
+      name="author_password"
+      class="form-control"
+      id="password"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="info" class="form-label">Author info</label>
+    <textarea
+      class="form-control"
+      name="author_info"
+      id="info"
+      rows="3"
+    ></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="position" class="form-label">Author position</label>
+    <input
+      type="text"
+      name="author_position"
+      class="form-control"
+      id="position"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+  const form = document.getElementById("loginForm")
+  form.addEventListener("submit", async(e) => {
+    e.preventDefault()
+    const author_first_name = document.getElementById("first_name")
+    const author_last_name =  document.getElementById("last_name")
+    const author_email =  document.getElementById("email")
+    const author_phone =  document.getElementById("phone")
+    const author_password =  document.getElementById("password")
+    const author_info =  document.getElementById("info")
+    const author_position =  document.getElementById("position")
+  })
+
+</script>

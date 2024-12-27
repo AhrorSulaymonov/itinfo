@@ -1,0 +1,138 @@
+{
+  "level": "error",
+  "message": "middlewareError",
+  "meta": {
+    "date": "Tue Dec 24 2024 10:10:00 GMT+0500 (Uzbekistan Standard Time)",
+    "error": {
+      "body": "{\r\n    \"author_email\":\"AhrorSulaymonov494@gmail.com\"\r\n    \"author_password\":\"123456\"\r\n}",
+      "expose": true,
+      "status": 400,
+      "statusCode": 400,
+      "type": "entity.parse.failed"
+    },
+    "exception": true,
+    "level": "error",
+    "message": "uncaughtException: Expected ',' or '}' after property value in JSON at position 58 (line 3 column 5)\nSyntaxError: Expected ',' or '}' after property value in JSON at position 58 (line 3 column 5)\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\body-parser\\lib\\types\\json.js:92:19)\n    at C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)\n    at invokeCallback (C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\raw-body\\index.js:238:16)\n    at done (C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:518:28)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)",
+    "os": { "loadavg": [0, 0, 0], "uptime": 1095.796 },
+    "process": {
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\app"
+      ],
+      "cwd": "C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO",
+      "execPath": "C:\\Program Files\\nodejs\\node.exe",
+      "gid": null,
+      "memoryUsage": {
+        "arrayBuffers": 18306588,
+        "external": 20687630,
+        "heapTotal": 31637504,
+        "heapUsed": 29158720,
+        "rss": 75227136
+      },
+      "pid": 2420,
+      "uid": null,
+      "version": "v22.11.0"
+    },
+    "req": {
+      "headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br",
+        "connection": "keep-alive",
+        "content-length": "87",
+        "content-type": "application/json",
+        "cookie": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjliYzNlZjYyOWRhOWVmMGMzZGI4YyIsImVtYWlsIjoiYWhyb3JzdWxheW1vbm92NDk0QGdtYWlsLmNvbSIsImF1dGhvcl9pc19hY3RpdmUiOmZhbHNlLCJpYXQiOjE3MzUwMTY3MzksImV4cCI6MTczNjMxMjczOX0.Gn941LBfWWJ9vazDbz3AqNxTBcL43SMnEPrc_l0kdAQ",
+        "host": "localhost:3030",
+        "postman-token": "3d21f0b5-c852-4f32-84b6-ca43fdce5b9f",
+        "user-agent": "PostmanRuntime/7.43.0"
+      },
+      "httpVersion": "1.1",
+      "method": "POST",
+      "originalUrl": "/api/author/login",
+      "query": {},
+      "url": "/api/author/login"
+    },
+    "stack": "SyntaxError: Expected ',' or '}' after property value in JSON at position 58 (line 3 column 5)\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\body-parser\\lib\\types\\json.js:92:19)\n    at C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)\n    at invokeCallback (C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\raw-body\\index.js:238:16)\n    at done (C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:518:28)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)",
+    "trace": [
+      {
+        "column": null,
+        "file": null,
+        "function": "JSON.parse",
+        "line": null,
+        "method": "parse",
+        "native": false
+      },
+      {
+        "column": 19,
+        "file": "C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\body-parser\\lib\\types\\json.js",
+        "function": "parse",
+        "line": 92,
+        "method": null,
+        "native": false
+      },
+      {
+        "column": 18,
+        "file": "C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\body-parser\\lib\\read.js",
+        "function": null,
+        "line": 128,
+        "method": null,
+        "native": false
+      },
+      {
+        "column": 14,
+        "file": "node:async_hooks",
+        "function": "AsyncResource.runInAsyncScope",
+        "line": 211,
+        "method": "runInAsyncScope",
+        "native": false
+      },
+      {
+        "column": 16,
+        "file": "C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\raw-body\\index.js",
+        "function": "invokeCallback",
+        "line": 238,
+        "method": null,
+        "native": false
+      },
+      {
+        "column": 7,
+        "file": "C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\raw-body\\index.js",
+        "function": "done",
+        "line": 227,
+        "method": null,
+        "native": false
+      },
+      {
+        "column": 7,
+        "file": "C:\\Users\\Ahror\\OneDrive\\Desktop\\Najot_talim\\Result\\ITINFO\\node_modules\\raw-body\\index.js",
+        "function": "IncomingMessage.onEnd",
+        "line": 287,
+        "method": "onEnd",
+        "native": false
+      },
+      {
+        "column": 28,
+        "file": "node:events",
+        "function": "IncomingMessage.emit",
+        "line": 518,
+        "method": "emit",
+        "native": false
+      },
+      {
+        "column": 12,
+        "file": "node:internal/streams/readable",
+        "function": "endReadableNT",
+        "line": 1698,
+        "method": null,
+        "native": false
+      },
+      {
+        "column": 21,
+        "file": "node:internal/process/task_queues",
+        "function": "process.processTicksAndRejections",
+        "line": 90,
+        "method": "processTicksAndRejections",
+        "native": false
+      }
+    ]
+  }
+}
