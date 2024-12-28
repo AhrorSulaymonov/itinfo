@@ -48,7 +48,6 @@
         })
     })
     .then((response) => {
-        console.log(response)
         if(response.ok){
             console.log("Login successfully")
             return response.json()
@@ -56,7 +55,6 @@
             console.log("Login failed")
         }
     }).then((data) => {
-        console.log(data)
         localStorage.setItem("admin_accessToken", data.admin_accessToken)
         form.style.display = "none"
         const welcome1 = document.getElementById("welcome")

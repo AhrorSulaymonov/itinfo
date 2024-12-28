@@ -77,7 +77,6 @@ const deleteDescriptionById = async (req, res) => {
       return res.status(400).send({ message: "ID noto'g'ri" });
     }
     const description = await Description.deleteOne({ _id: id });
-    console.log(description);
     res.send(description);
   } catch (error) {
     errorHandler(error, res);

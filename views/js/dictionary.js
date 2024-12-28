@@ -7,7 +7,6 @@ const div = document.getElementById("cardWrapper");
       throw new Error(`HTTP xato: ${response.status}`);
     }
     const data = await response.json();
-    console.log(data);
     if (data.terms.length == 0) {
       iv.innerHTML = `<div class="card" style="width: 18rem;">
         <img src="./images/for_termin.png" class="card-img-top" alt="Salomat" />

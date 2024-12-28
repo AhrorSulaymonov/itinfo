@@ -60,7 +60,6 @@
             console.log("Login failed")
         }
     }).then((data) => {
-        console.log(data)
         localStorage.setItem("accessToken", data.accessToken)
         form.style.display = "none"
         const welcome1 = document.getElementById("welcome")

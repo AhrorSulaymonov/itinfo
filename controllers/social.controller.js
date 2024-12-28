@@ -6,7 +6,6 @@ const { socialValidation } = require("../validations/social.validation");
 const addSocial = async (req, res) => {
   try {
     const { error, value } = socialValidation(req.body);
-    console.log(value);
     if (error) {
       return errorHandler(error, res);
     }
@@ -53,7 +52,6 @@ const deleteSocialById = async (req, res) => {
       return res.status(400).send({ message: "ID noto'g'ri" });
     }
     const social = await Social.deleteOne({ _id: id });
-    console.log(social);
     res.send(social);
   } catch (error) {
     errorHandler(error, res);

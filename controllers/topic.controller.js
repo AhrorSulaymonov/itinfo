@@ -6,7 +6,6 @@ const { topicValidation } = require("../validations/topic.validation");
 const addTopic = async (req, res) => {
   try {
     const { error, value } = topicValidation(req.body);
-    console.log(value);
     if (error) {
       return errorHandler(error, res);
     }
@@ -64,7 +63,6 @@ const deleteTopicById = async (req, res) => {
       return res.status(400).send({ message: "ID noto'g'ri" });
     }
     const topic = await Topic.deleteOne({ _id: id });
-    console.log(topic);
     res.send(topic);
   } catch (error) {
     errorHandler(error, res);

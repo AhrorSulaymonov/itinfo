@@ -43,7 +43,6 @@ const deleteAuthorSocialById = async (req, res) => {
       return res.status(400).send({ message: "ID noto'g'ri" });
     }
     const authorSocial = await AuthorSocial.deleteOne({ _id: id });
-    console.log(authorSocial);
     res.send(authorSocial);
   } catch (error) {
     errorHandler(error, res);

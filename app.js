@@ -17,17 +17,13 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-
-
 app.engine("hbs", hbs.engine);
 app.set("view engine", "hbs");
 app.set("views", "./views");
 app.use(express.static("views"));
 
-console.log('a');
 app.use("/", viewRouter); //frontend
 app.use("/api", mainRouter); //backend
-
 
 async function start() {
   try {

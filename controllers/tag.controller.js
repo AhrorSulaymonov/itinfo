@@ -6,7 +6,6 @@ const { tagValidation } = require("../validations/tag.validation");
 const addTag = async (req, res) => {
   try {
     const { error, value } = tagValidation(req.body);
-    console.log(value);
     if (error) {
       return errorHandler(error, res);
     }
@@ -85,7 +84,6 @@ const deleteTagById = async (req, res) => {
       return res.status(400).send({ message: "ID noto'g'ri" });
     }
     const tag = await Tag.deleteOne({ _id: id });
-    console.log(tag);
     res.send(tag);
   } catch (error) {
     errorHandler(error, res);

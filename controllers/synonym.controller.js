@@ -6,7 +6,6 @@ const { synonymValidation } = require("../validations/synonym.validation");
 const addSynonym = async (req, res) => {
   try {
     const { error, value } = synonymValidation(req.body);
-    console.log(value);
     if (error) {
       return errorHandler(error, res);
     }
@@ -85,7 +84,6 @@ const deleteSynonymById = async (req, res) => {
       return res.status(400).send({ message: "ID noto'g'ri" });
     }
     const cynonym = await Synonym.deleteOne({ _id: id });
-    console.log(cynonym);
     res.send(cynonym);
   } catch (error) {
     errorHandler(error, res);

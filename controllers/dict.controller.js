@@ -62,7 +62,6 @@ const deleteTermById = async (req, res) => {
     }
 
     const term = await Dictionary.deleteOne({ _id: id });
-    console.log(term);
     res.send(term);
   } catch (error) {
     errorHandler(error, res);

@@ -7,7 +7,6 @@ const { categoryValidation } = require("../validations/category.validation");
 const addCategory = async (req, res) => {
   try {
     const { error, value } = categoryValidation(req.body);
-    console.log(req.body);
 
     if (error) {
       return errorHandler(error, res);
@@ -58,7 +57,6 @@ const deleteCategoryById = async (req, res) => {
       return res.status(400).send({ message: "ID noto'g'ri" });
     }
     const category = await Category.deleteOne({ _id: id });
-    console.log(category);
     res.send(category);
   } catch (error) {
     errorHandler(error, res);

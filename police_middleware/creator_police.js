@@ -5,7 +5,6 @@ const adminJwt = require("../services/jwt_service");
 module.exports = async function (req, res, next) {
   try {
     const authorization = req.headers.authorization;
-    console.log(authorization);
     if (!authorization) {
       return res
         .status(403)

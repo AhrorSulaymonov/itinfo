@@ -35,7 +35,6 @@ async function getAdmins() {
       }
     })
     .then((admin) => {
-      console.log(admin.admins);
       displayAdmin(admin.admins);
     })
     .catch((error) => {

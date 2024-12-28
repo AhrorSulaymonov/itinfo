@@ -4,7 +4,6 @@ const adminJwt = require("../services/jwt_service");
 module.exports = async function (req, res, next) {
   try {
     const authorization = req.headers.authorization;
-    console.log(authorization);
     if (!authorization) {
       return res
         .status(403)
@@ -26,7 +25,7 @@ module.exports = async function (req, res, next) {
       console.log(error);
       return res.status(403).send({ message: error.message });
     }
-    console.log(decodedToken);
+    console.log("decoded token", decodedToken);
     req.admin = decodedToken;
     next();
   } catch (error) {

@@ -12,7 +12,6 @@ const uuid = require("uuid");
 const addUser = async (req, res) => {
   try {
     const { error, value } = userValidation(req.body);
-    console.log(value);
 
     if (error) {
       return errorHandler(error, res);
@@ -35,7 +34,6 @@ const addUser = async (req, res) => {
     const hashedPassword = bcrypt.hashSync(value.user_password, 7);
 
     const activation_link = uuid.v4();
-    console.log(activation_link);
 
     const newUser = await User.create({
       ...value,
@@ -91,7 +89,6 @@ const loginUser = async (req, res) => {
 const logoutUser = async (req, res) => {
   try {
     const { refreshToken } = req.cookies;
-    console.log(refreshToken);
     if (!refreshToken) {
       return res.status(400).send({ message: "token topilmadi" });
     }
@@ -178,7 +175,6 @@ const deleteUserById = async (req, res) => {
       return res.status(400).send({ message: "ID noto'g'ri" });
     }
     const user = await User.deleteOne({ _id: id });
-    console.log(user);
     res.send(user);
   } catch (error) {
     errorHandler(error, res);
@@ -196,14 +192,6 @@ const updateUserById = async (req, res) => {
       user_photo,
       user_is_active,
     } = req.body;
-    console.log(
-      user_name,
-      user_email,
-      user_password,
-      user_info,
-      user_photo,
-      user_is_active
-    );
 
     const newUser = await User.updateOne(
       { _id: id },

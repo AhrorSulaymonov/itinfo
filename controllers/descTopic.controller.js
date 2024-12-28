@@ -84,7 +84,6 @@ const deleteDescTopicById = async (req, res) => {
       return res.status(400).send({ message: "ID noto'g'ri" });
     }
     const descTopic = await DescTopic.deleteOne({ _id: id });
-    console.log(descTopic);
     res.send(descTopic);
   } catch (error) {
     errorHandler(error, res);

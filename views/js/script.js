@@ -1,7 +1,5 @@
 async function getAuthors() {
   let accessToken = localStorage.getItem("accessToken");
-  let salom = localStorage.getItem("message");
-  console.log("salom", salom);
 
   console.log("accessToken: ", accessToken);
   const accessTokenExpTime = getTokenExpiration(accessToken);
@@ -34,7 +32,6 @@ async function getAuthors() {
       }
     })
     .then((author) => {
-      console.log(author.authors);
       displayAuthor(author.authors);
     })
     .catch((error) => {

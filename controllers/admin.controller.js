@@ -9,7 +9,6 @@ const config = require("config");
 const addAdmin = async (req, res) => {
   try {
     const { error, value } = adminValidation(req.body);
-    console.log(value);
 
     if (error) {
       return errorHandler(error, res);
@@ -167,7 +166,6 @@ const deleteAdminById = async (req, res) => {
       return res.status(400).send({ message: "ID noto'g'ri" });
     }
     const admin = await Admin.deleteOne({ _id: id });
-    console.log(admin);
     res.send(admin);
   } catch (error) {
     errorHandler(error, res);

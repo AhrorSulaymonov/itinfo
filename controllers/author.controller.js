@@ -15,7 +15,6 @@ const logger = require("../services/logger.service");
 const addAuthor = async (req, res) => {
   try {
     const { error, value } = authorValidation(req.body);
-    console.log(value);
 
     if (error) {
       return errorHandler(error, res);
@@ -30,8 +29,6 @@ const addAuthor = async (req, res) => {
     const hashedPassword = bcrypt.hashSync(value.author_password, 7);
 
     const activation_link = uuid.v4();
-    console.log("activation link", activation_link);
-
     const newAuthor = await Author.create({
       ...value,
       author_password: hashedPassword,
@@ -124,7 +121,6 @@ const loginAuthor = async (req, res) => {
 const logoutAuthor = async (req, res) => {
   try {
     const { refreshToken } = req.cookies;
-    console.log(refreshToken);
     if (!refreshToken) {
       return res.status(400).send({ message: "token topilmadi" });
     }
@@ -184,7 +180,6 @@ const refreshAuthorToken = async (req, res) => {
 const getAuthors = async (req, res) => {
   try {
     const authors = await Author.find();
-    console.log(req);
 
     res.send({ authors });
   } catch (error) {
@@ -211,7 +206,6 @@ const deleteAuthorById = async (req, res) => {
       return res.status(400).send({ message: "ID noto'g'ri" });
     }
     const author = await Author.deleteOne({ _id: id });
-    console.log(author);
     res.send(author);
   } catch (error) {
     errorHandler(error, res);
@@ -234,19 +228,7 @@ const updateAuthorById = async (req, res) => {
       is_expert,
       author_is_active,
     } = req.body;
-    console.log(
-      author_first_name,
-      author_last_name,
-      author_nick_name,
-      author_email,
-      author_phone,
-      author_password,
-      author_info,
-      author_position,
-      author_photo,
-      is_expert,
-      author_is_active
-    );
+
 
     const newAuthor = await Author.updateOne(
       { _id: id },
