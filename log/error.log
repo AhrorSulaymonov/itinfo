@@ -47,3 +47,6 @@ Error: unhandledRejection example
 2024-12-24T11:30:18.187Z  error: Cast to string failed for value "{}" (type Object) at path "author_email" for model "Author"
 2024-12-24T11:32:47.489Z  error: Cast to string failed for value "{}" (type Object) at path "author_email" for model "Author"
 2024-12-24T16:41:16.001Z  error: Expected property name or '}' in JSON at position 4 (line 2 column 3)
+2025-01-03T16:18:22.418Z  error: Cannot combine string with boolean
+2025-01-03T16:22:49.356Z  error: Cannot combine string with boolean
+2025-01-03T16:23:11.989Z  error: Cannot combine string with boolean

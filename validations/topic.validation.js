@@ -37,8 +37,8 @@ exports.topicValidation = (data) => {
       .message("author_id noto'g'ri")
       .when("is_checked", {
         is: true,
-        then: Joi.boolean().required(),
-        otherwise: Joi.boolean().optional(),
+        then: Joi.string().required(),
+        otherwise: Joi.string().optional(),
       })
       .messages({
         "string.empty": "author_id nomi bo'sh bo'lishi mumkin emas",
