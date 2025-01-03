@@ -36,7 +36,7 @@ const userSchema = new Schema(
     },
     user_is_active: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     refresh_token: String,
     activation_link: String,
