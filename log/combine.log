@@ -98,3 +98,5 @@ Error: unhandledRejection example
 2025-01-03T16:18:22.418Z  error: Cannot combine string with boolean
 2025-01-03T16:22:49.356Z  error: Cannot combine string with boolean
 2025-01-03T16:23:11.989Z  error: Cannot combine string with boolean
+2025-01-03T16:28:25.563Z  error: Topic validation failed: expert_id: Berilgan expert_id haqiqiy emas yoki ekspert emas, author_id: Berilgan author_id haqiqiy emas
+2025-01-03T16:31:59.423Z  error: Topic validation failed: author_id: Berilgan author_id haqiqiy emas
