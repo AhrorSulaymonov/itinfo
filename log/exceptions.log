@@ -736,3 +736,19 @@ SyntaxError: Invalid shorthand property initializer
     at Module.require (node:internal/modules/cjs/loader:1340:12)
     at require (node:internal/modules/helpers:141:16)
     at Object.<anonymous> (C:\Users\Ahror\OneDrive\Desktop\Najot_talim\Result\ITINFO\routes\author.routes.js:11:5)
+2025-01-14T03:45:00.052Z  error: uncaughtException: missing ) after argument list
+C:\Users\Ahror\OneDrive\Desktop\Najot_talim\Result\ITINFO\routes\admin.routes.js:16
+router.post("/create",creato addAdmin);
+                      ^^^^^^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Ahror\OneDrive\Desktop\Najot_talim\Result\ITINFO\routes\index.routes.js:13:20)

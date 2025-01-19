@@ -13,7 +13,7 @@ const adminSelfPolice = require("../police_middleware/admin_self_police");
 const creatorPolice = require("../police_middleware/creator_police");
 const router = require("express").Router();
 
-router.post("/create", addAdmin);
+router.post("/create", creatorPolice, addAdmin);
 
 router.get("/all", getAdmins);
 

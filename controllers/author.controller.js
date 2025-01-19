@@ -4,10 +4,8 @@ const Author = require("../schemas/Author");
 const { authorValidation } = require("../validations/author.validation");
 const bcrypt = require("bcrypt");
 const config = require("config");
-const jwt = require("jsonwebtoken");
 const authorJwt = require("../services/jwt_service");
 const { to } = require("../helpers/to_promise");
-
 const uuid = require("uuid");
 const mailService = require("../services/mail.service");
 const logger = require("../services/logger.service");
@@ -228,7 +226,6 @@ const updateAuthorById = async (req, res) => {
       is_expert,
       author_is_active,
     } = req.body;
-
 
     const newAuthor = await Author.updateOne(
       { _id: id },
